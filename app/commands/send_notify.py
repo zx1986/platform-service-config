@@ -5,6 +5,6 @@ import click
 
 @click.command()
 @click.argument('name')
-def send_mail(name):
-    """Greet a person by name."""
+def send_notify(name):
+    """Send info to owner of instance."""
     click.echo(f"Hello, {name}!")
