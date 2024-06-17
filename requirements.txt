@@ -1,0 +1,13 @@
+click  # command lines interface
+httpx  # better requests
+hvac  # HashiCorp Vault API client
+icecream  # debug
+loguru  # logger
+pendulum  # timezone
+polars  # data frame
+pydantic  # data validation
+pytest
+pytest-click
+python-dotenv
+rich  # rich text in terminal
+sqlmodel
