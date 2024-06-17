@@ -1,3 +1,4 @@
+azure-devops
 click  # command lines interface
 httpx  # better requests
 hvac  # HashiCorp Vault API client
