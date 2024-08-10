@@ -8,14 +8,17 @@ MAKEFLAGS = --jobs=1
 NOW = $(shell date +"%Y%m%d_%H%M%S")
 FILENAME = $(shell basename -- ${target})
 NAME = $(shell basename ${FILENAME} .j2)
+DOCKER_DEFAULT_PLATFORM=linux/amd64
 
 .PHONY: build
 build: ## build docker image
-	docker-compose build
+	docker compose build
 
-.PHONY: init
-init: ## initialize development environment
-	pip3 install -r requirements.txt
+.PHONY: up
+up: ## run a local development environment in container
+	$(MAKE) build
+	docker compose up -d
+	docker compose exec app bash
 
 .PHONY: clean
 clean: ## clean up
