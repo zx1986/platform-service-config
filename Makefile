@@ -20,6 +20,10 @@ up: ## run a local development environment in container
 	docker compose up -d
 	docker compose exec app bash
 
+.PHONY: down
+down: ## shutdown running container
+	docker compose down
+
 .PHONY: clean
 clean: ## clean up
 	find . -name '*.pyc' | xargs rm -fv
