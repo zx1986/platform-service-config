@@ -17,6 +17,10 @@ build: ## build docker image
 init: ## initialize development environment
 	pip3 install -r requirements.txt
 
+.PHONY: clean
+clean: ## clean up
+	find . -name '*.pyc' | xargs rm -fv
+
 # Absolutely awesome: http://marmelab.com/blog/2016/02/29/auto-documented-makefile.html
 .PHONY: help
 help:
