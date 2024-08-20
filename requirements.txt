@@ -12,4 +12,3 @@ pytest-click
 python-dotenv
 rich  # rich text in terminal
 sqlmodel
-dotenv
